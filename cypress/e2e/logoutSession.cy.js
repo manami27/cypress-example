@@ -26,9 +26,10 @@ describe('Logout Session', () => {
       cy.contains('This account has been used by another user!').should(
         'be.visible',
       )
+      const apiUrl = Cypress.config('apiUrl')
       cy.request({
         method: 'GET',
-        url: 'https://api-k-prime.devucc.name/api/v1/auth/me',
+        url: apiUrl + '/api/v1/auth/me',
         failOnStatusCode: false,
       }).then((response) => {
         expect(response.status).to.eq(401)

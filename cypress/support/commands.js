@@ -42,9 +42,10 @@ Cypress.Commands.add('validLogin', (username, password) => {
 
 Cypress.Commands.add('loginUsingAPI', (email, password) => {
   // Send request to the KPrime API login endpoint
+  const apiUrl = Cypress.config('apiUrl')
   cy.request({
     method: 'POST',
-    url: 'https://api-k-prime.devucc.name/api/v1/auth/login',
+    url: apiUrl + '/api/v1/auth/login',
     body: { email, password },
   }).then((response) => {
     expect(response.status).to.eq(200)
