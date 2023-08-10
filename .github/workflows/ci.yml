@@ -1,8 +1,8 @@
-name: End-to-end tests
+name: Cypress Kprime Tests
 on: push
 jobs:
   cypress-run:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -10,3 +10,10 @@ jobs:
       # and run all Cypress tests
       - name: Cypress run
         uses: cypress-io/github-action@v5
+        with:
+          build: npm run build
+          start: npm start
+          browser: chrome
+        env:
+          CYPRESS_username: ${{secrets.CYPRESS_USERNAME}}
+          CYPRESS_password: ${{secrets.CYPRESS_PASSWORD}}

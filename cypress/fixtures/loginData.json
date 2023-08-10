@@ -1,0 +1,32 @@
+{
+  "validUser": {
+    "id": "correct user",
+    "username": "superadmin@mail.com",
+    "password": "superpassword"
+  },
+  "invalidUser": {
+    "id": "incorrect user/password",
+    "username": "superadmin@mail.com",
+    "password": "super"
+  },
+  "invalidEmail": {
+    "id": "invalid email",
+    "username": "superadmin",
+    "password": "superpassword"
+  },
+  "emptyEmail": {
+    "id": "Empty email",
+    "username": "{backspace}",
+    "password": "superpassword"
+  },
+  "emptyPassword": {
+    "id": "empty password",
+    "username": "superadmin@mail.com",
+    "password": "{backspace}"
+  },
+  "validUserAPI": {
+    "id": "correct user",
+    "email": "superadmin@mail.com",
+    "password": "superpassword"
+  }
+}

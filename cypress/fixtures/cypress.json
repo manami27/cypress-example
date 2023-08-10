@@ -1,0 +1,9 @@
+{
+  "env": {
+    "userId": "1",
+    "environment": "development",
+    "baseUrl": "https://k-admin.devucc.name/",
+    "username": "",
+    "password": ""
+  }
+}
